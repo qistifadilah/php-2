@@ -23,7 +23,7 @@ Output: "Halo Abduh, Selamat Datang di Jabar Coding Camp!"
 */
 
     // Code function di sini
-    function printBr() 
+    function printBr()
     {
         echo "<br>";
     }
@@ -54,12 +54,12 @@ Output: ludba
 */
 
     // Code function di sini 
-    function reverseString($kata) {
+    function reverseString($kata)
+    {
         for ($y = strlen($kata) - 1; $y >= 0; $y--) {
             echo $kata[$y];
         }
     }
-
     // Hapus komentar di bawah ini untuk jalankan Code
     reverseString("abduh");
     printBr();
@@ -85,12 +85,26 @@ NB: DILARANG menggunakan built-in function PHP seperti strrev() dll. Gunakan loo
 
 
     // Code function di sini
-
+    function palindrome($kata)
+    {
+        $reverse = "";
+        for ($y = strlen($kata) - 1; $y >= 0; $y--) {
+            $reverse .= $kata[$y];
+        }
+        if ($reverse == $kata) {
+            echo "true";
+        } else {
+            echo "false";
+        }
+    }
     // Hapus komentar di bawah ini untuk jalankan code
-    // palindrome("civic") ; // true
-    // palindrome("nababan") ; // true
-    // palindrome("jambaban"); // false
-    // palindrome("racecar"); // true
+    palindrome("civic"); // true
+    printBr();
+    palindrome("nababan"); // true
+    printBr();
+    palindrome("jambaban"); // false
+    printBr();
+    palindrome("racecar"); // true
 
 
     echo "<h3>Soal No 4 Tentukan Nilai </h3>";
@@ -103,14 +117,26 @@ sama dengan 60 dan lebih kecil dari 70 maka akan mereturn string “Cukup” sel
 */
 
     // Code function di sini
-
+    function tentukan_nilai($nilai)
+    {
+        if ($nilai >= 85 && $nilai <= 100) {
+            return "Sangat Baik";
+        } else if ($nilai >= 70 && $nilai <= 85) {
+            return "Baik";
+        } else if ($nilai >= 60 && $nilai <= 70) {
+            return "Cukup";
+        } else {
+            return "Kurang";
+        }
+    }
     // Hapus komentar di bawah ini untuk jalankan code
-    // echo tentukan_nilai(98); //Sangat Baik
-    // echo tentukan_nilai(76); //Baik
-    // echo tentukan_nilai(67); //Cukup
-    // echo tentukan_nilai(43); //Kurang
-
-
+    echo tentukan_nilai(98); //Sangat Baik
+    printBr();
+    echo tentukan_nilai(76); //Baik
+    printBr();
+    echo tentukan_nilai(67); //Cukup
+    printBr();
+    echo tentukan_nilai(43); //Kurang
     ?>
 
 </body>
